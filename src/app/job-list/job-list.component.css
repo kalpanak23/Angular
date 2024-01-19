@@ -1,0 +1,79 @@
+/* src/app/job-list/job-list.component.css */
+
+.job-list {
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+/* Edit and Delete buttons */
+
+.edit-button,
+.delete-button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+
+/* Edit Form styling */
+
+form {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    width: 50%;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.update-button,
+.cancel-button {
+    padding: 8px;
+    cursor: pointer;
+}
+
+.edit-button,
+.delete-button {
+    background-color: #c6cf18;
+}
+
+.update-button,
+.cancel-button {
+    background-color: #f44336;
+}
+
+.edit-button:hover,
+.delete-button:hover,
+.update-button:hover,
+.cancel-button:hover {
+    background-color: #45a049;
+}

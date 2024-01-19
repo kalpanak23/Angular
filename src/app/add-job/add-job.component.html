@@ -1,0 +1,61 @@
+<div>
+    <h2>Add New Job</h2>
+    <form [formGroup]="jobForm" (ngSubmit)="addJob()">
+        <label for="title">Title:</label>
+        <input type="text" id="title" formControlName="title">
+        <div *ngIf="jobForm.controls['title'].invalid && jobForm.controls['title'].touched">
+            <div *ngIf="jobForm.controls['title'].hasError('required')">Title is required.</div>
+        </div>
+        <br>
+        <label for="company_name">Company Name:</label>
+        <input type="text" id="company_name" formControlName="company_name">
+        <div *ngIf="jobForm.controls['company_name'].invalid && jobForm.controls['company_name'].touched">
+            <div *ngIf="jobForm.controls['company_name'].hasError('required')">Company Name is required.</div>
+        </div>
+        <br>
+        <label for="job_type">Job Type:</label>
+        <input type="text" id="job_type" formControlName="job_type">
+        <div *ngIf="jobForm.controls['job_type'].invalid && jobForm.controls['job_type'].touched">
+            <div *ngIf="jobForm.controls['job_type'].hasError('required')">Job Type is required.</div>
+        </div>
+        <br>
+        <label for="eligibility">Eligibility:</label>
+        <input type="text" id="eligibility" formControlName="eligibility">
+        <div *ngIf="jobForm.controls['eligibility'].invalid && jobForm.controls['eligibility'].touched">
+            <div *ngIf="jobForm.controls['eligibility'].hasError('required')">Eligibility is required.</div>
+        </div>
+        <br>
+        <label for="skills">Skills:</label>
+        <input type="text" id="skills" formControlName="skills">
+        <div *ngIf="jobForm.controls['skills'].invalid && jobForm.controls['skills'].touched">
+            <div *ngIf="jobForm.controls['skills'].hasError('required')">Skills is required.</div>
+        </div>
+        <br>
+        <label for="description">Description:</label>
+        <textarea id="description" formControlName="description"></textarea>
+        <div *ngIf="jobForm.controls['description'].invalid && jobForm.controls['description'].touched">
+            <div *ngIf="jobForm.controls['description'].hasError('required')">Description is required.</div>
+        </div>
+        <br>
+        <label for="location">Location:</label>
+        <input type="text" id="location" formControlName="location">
+        <div *ngIf="jobForm.controls['location'].invalid && jobForm.controls['location'].touched">
+            <div *ngIf="jobForm.controls['location'].hasError('required')">Location is required.</div>
+        </div>
+        <br>
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" formControlName="contact">
+        <div *ngIf="jobForm.controls['contact'].invalid && jobForm.controls['contact'].touched">
+            <div *ngIf="jobForm.controls['contact'].hasError('required')">Contact is required.</div>
+        </div>
+
+        <div *ngIf="jobForm.get('contact')?.hasError('pattern') && jobForm.get('contact')?.touched" class="text-danger">
+            Contact should be numeric.
+        </div>
+
+
+        <br>
+        <button type="submit">Add Job</button>
+
+    </form>
+</div>

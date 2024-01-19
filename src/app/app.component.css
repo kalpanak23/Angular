@@ -1,0 +1,45 @@
+/* src/app/job-nav-bar/job-nav-bar.component.css */
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+    line-height: 3px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    align-self: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+    /* Change the color on hover */
+}
+
+.main-content {
+    padding: 20px;
+}
