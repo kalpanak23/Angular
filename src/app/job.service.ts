@@ -8,7 +8,7 @@ export class JobService {
   updatedJob(selectedJob: any) {
     throw new Error('Method not implemented.');
   }
-  private apiUrl = 'http://localhost:8080/job';
+  private apiUrl = 'http://localhost:8081/job';
   private selectedJob: any; 
   constructor(private http: HttpClient) { }
   
